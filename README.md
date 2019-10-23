@@ -1,5 +1,7 @@
 ### Some Learning Notes ###
 
+&nbsp;
+
 #### Creating Java jar files from Command Line ####
 
 In the BeforeMaven folder, to package HelloWorld.class, run: 
@@ -28,6 +30,20 @@ To run the new class file that utilises the 3rd party library, run:
 `java -classpath ./lib/*:./ HelloWorld`
 
 `./lib/*:./` picks up everything in the lib, as well as the root folder. Without it, JVM will not be able to run. 
+
+&nbsp;
+
+#### Maven Concepts ####
+
+* Maven artifacts are in target directory.
+* Maven Coordinates: groupId, artifactId, version. 
+* 
+
+&nbsp;
+
+#### Maven Commands ####
+
+`mvn clean` cleans up build artifacts. E.g. the target directory. 
 
 
 
