@@ -50,6 +50,17 @@ repository again.
 * Local, Central, Remote
 * Central: http://repo1.maven.org/ or https://mvnrepository.com/
 
+##### Maven POM #####
+* Effective POM: POM that is complete with inherited properties. 
+
+##### Maven Dependencies #####
+* Cyclic dependencies are not supported. 
+* Dependency Mediation: A->B, A->D2.0, B->D1.5. D2.0 will be included. 
+* Dependency Scope: If JUnit and Mockito are not declared in test scope, that is like telling people downstream that they
+need JUnit and Mockito. This will cause people pain in the down road in open source projects. 
+* 
+
+
 &nbsp;
 
 #### Maven Commands ####
