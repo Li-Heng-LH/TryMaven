@@ -35,9 +35,20 @@ To run the new class file that utilises the 3rd party library, run:
 
 #### Maven Concepts ####
 
-* Maven artifacts are in target directory.
-* Maven Coordinates: groupId, artifactId, version. 
-* 
+##### Maven Coordinates #####
+
+* Maven **artifacts** are in **target** directory.
+* Maven **Coordinates**: **groupId**, **artifactId**, **version**. Together, they identify a location in the maven repository. 
+* Version number: major.minor.incremental
+* Snapshot: SNAPSHOT suffix is an important maven qualifier. It tells maven that this is a development version 
+and it is not stable. 
+* Without SNAPSHOT suffix, maven will download the artifact into local repository and will never check in the remote 
+repository again. 
+* With SNAPSHOT suffix, maven will check for newer versions.
+
+##### Maven Repositories #####
+* Local, Central, Remote
+* Central: http://repo1.maven.org/ or https://mvnrepository.com/
 
 &nbsp;
 
