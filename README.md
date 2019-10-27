@@ -58,8 +58,35 @@ repository again.
 * Dependency Mediation: A->B, A->D2.0, B->D1.5. D2.0 will be included. 
 * Dependency Scope: If JUnit and Mockito are not declared in test scope, that is like telling people downstream that they
 need JUnit and Mockito. This will cause people pain in the down road in open source projects. 
-* 
 
+##### Maven Plugins #####
+
+* Maven is a framework that runs plugins. 
+* A plugin can be thought of as a JAR file with exposed functionality. 
+* There are three built-in life cycles: clean, default, site. 
+* **Each life cycle consists of a sequence of phases**. clean: 3, default: 23, site: 4.
+* Phases are executed in a specific order. 
+* Running `mvn deploy` will not only execute _deploy_ phase, but all the phases before it as well, which is the entire 
+_default_ lifecycle. 
+* **Each phase is a sequence of goals**. When we run a phase, all goals bound to this phase are executed in order.
+* **A plugin is a group of goals**. However, these goals are not necessarily all bound to the same phase.
+* We can just run a specific goal, without executing its entire phase and the preceding phases. 
+
+&nbsp;
+
+* To build a project, `mvn deploy` executes the entire _default_ lifecycle.
+* `mvn install` stops at the _install_ phase. 
+* `mvn clean install` is usually used to clean the project first by running the clean lifecycle
+* Can also run only a specific goal of the plugin: `mvn compiler:compile`.
+
+
+&nbsp;
+
+* CLEAN lifecycle removes files generated during build process. 
+* By default removes /target directories. 
+* Why we need clean? Refactoring and renaming classes -> old classes and artifacts are still there, causing unpredictable 
+behaviour. 
+* 
 
 &nbsp;
 
@@ -69,3 +96,8 @@ need JUnit and Mockito. This will cause people pain in the down road in open sou
 
 
 
+&nbsp;
+&nbsp;
+
+##### Credits #####
+_Maven Goals and Phases_: https://www.baeldung.com/maven-goals-phases
