@@ -93,9 +93,11 @@ behaviour.
 
 #### Maven Commands ####
 
-`mvn clean` cleans up build artifacts. E.g. the target directory. 
-
-
+* `mvn clean` cleans up build artifacts. E.g. the target directory. 
+* `mvn clean` same as `mvn clean:clean`. Because  the Clean Plugin is a special plugin and is bound to its own special 
+lifecycyle phase called clean. 
+* `mvn install` install artifacts into local repositories. 
+* `mvn clean install` binds lifecycles. 
 
 &nbsp;
 &nbsp;
