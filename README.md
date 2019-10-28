@@ -70,6 +70,7 @@ need JUnit and Mockito. This will cause people pain in the down road in open sou
 _default_ lifecycle. 
 * **Each phase is a sequence of goals**. When we run a phase, all goals bound to this phase are executed in order.
 * **A plugin is a group of goals**. However, these goals are not necessarily all bound to the same phase.
+* Analogy: Plugin is a class and goals are methods within the class.
 * We can just run a specific goal, without executing its entire phase and the preceding phases. 
 
 &nbsp;
