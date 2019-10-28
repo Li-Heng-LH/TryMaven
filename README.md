@@ -87,7 +87,7 @@ _default_ lifecycle.
 * By default removes /target directories. 
 * Why we need clean? Refactoring and renaming classes -> old classes and artifacts are still there, causing unpredictable 
 behaviour. 
-* 
+* Resources plugin: copy resources into target. 
 
 &nbsp;
 
